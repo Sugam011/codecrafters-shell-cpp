@@ -1,10 +1,11 @@
 #pragma once
 #include "../Interfaces/ICommandExecutor.h"
 #include "SuccessExitCommandExecutor.h"
-#include "DefaultCommandExecutor.h"
 #include "ExitCommandExecutor.h"
-#include <memory>
+#include "DefaultCommandExecutor.h"
+
 #include <vector>
+#include <memory>
 #include <iostream>
 #include <string>
 
@@ -19,7 +20,7 @@ public:
         executors.push_back(std::make_unique<DefaultCommandExecutor>());
     }
 
-    void ExecuteCommand(std::string& command) {
+    void ExecuteCommand(std::string command) {
         for (auto& executor : executors) {
             if (executor->CanExecute(command)) {
                 executor->Execute(command);

@@ -1,7 +1,9 @@
-#include<string>
+#pragma once
+#include <string>
 
-class ICommandExecutor{
-    public:
+class ICommandExecutor {
+public:
     virtual bool CanExecute(std::string& command) = 0;
     virtual void Execute(std::string& command) = 0;
-}
+    virtual ~ICommandExecutor() = default;
+};

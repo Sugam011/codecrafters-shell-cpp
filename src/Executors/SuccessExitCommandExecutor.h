@@ -1,5 +1,6 @@
+#pragma once
 #include "../Interfaces/ICommandExecutor.h"
-#include <iostream>
+#include <cstdlib>
 
 class SuccessExitCommandExecutor : public ICommandExecutor {
 public:
