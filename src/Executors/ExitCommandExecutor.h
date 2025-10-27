@@ -8,6 +8,6 @@ public:
     }
 
     void Execute(std::string& command) override {
-        exit(1);
+        std::exit(1);
     }
 };

@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include "Executors/CommandExecutorManager.h"
 
 int main()
 {
@@ -8,11 +9,12 @@ int main()
   std::cerr << std::unitbuf;
 
   // TODO: Uncomment the code below to pass the first stage
-  while (true)
-  {
-    std::cout << "$ ";
+ CommandExecutorManager manager;
+
     std::string command;
-    std::cin >> command;
-    std::cout << command << ": command not found\n";
-  }
+    while (true) {
+        std::cout << "$ ";
+        std::getline(std::cin, command);
+        manager.ExecuteCommand(command);
+    }
 }
