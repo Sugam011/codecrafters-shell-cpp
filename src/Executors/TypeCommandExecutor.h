@@ -15,7 +15,7 @@ public:
         if (BuiltinCommands::IsBuiltin(target)) {
             std::cout << target << " is a shell builtin" << std::endl;
         } else {
-            std::cout << command << ": not found" << std::endl;
+            std::cout << target << ": not found" << std::endl;
         }
     }
 };
