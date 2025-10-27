@@ -13,6 +13,6 @@ int main()
     std::cout << "$ ";
     std::string command;
     std::cin >> command;
-    std::cout << command << ": command not found";
+    std::cout << command << ": command not found\n";
   }
 }
