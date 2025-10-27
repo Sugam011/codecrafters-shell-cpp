@@ -3,6 +3,7 @@
 #include "SuccessExitCommandExecutor.h"
 #include "ExitCommandExecutor.h"
 #include "DefaultCommandExecutor.h"
+#include "EchoCommandExecutor.h"
 
 #include <vector>
 #include <memory>
@@ -17,6 +18,7 @@ public:
     CommandExecutorManager() {
         executors.push_back(std::make_unique<SuccessExitCommandExecutor>());
         executors.push_back(std::make_unique<ExitCommandExecutor>());
+        executors.push_back(std::make_unique<EchoCommandExecutor>());
         executors.push_back(std::make_unique<DefaultCommandExecutor>());
     }
 
