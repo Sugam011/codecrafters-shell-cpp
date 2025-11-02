@@ -5,7 +5,7 @@
 #include <sstream>
 #include <unistd.h>      // for access()
 #include <dirent.h>      // for opendir(), readdir()
-#include "ICommandExecutor.h"
+#include "../Interfaces/ICommandExecutor.h"
 #include "BuiltinCommands.h"
 
 class TypeCommandExecutor : public ICommandExecutor {
